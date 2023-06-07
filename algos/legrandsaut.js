@@ -1,8 +1,23 @@
-// const accounts = [539, 571, 372, 170, 461, 981, 562, 124];
-// let result = 0;
+let tab = 0;
+let listOfPrimeNumber = [];
 
-// for (let i = 0; i < accounts.length; i++) {
-//     result += accounts[i];
-// }
+function nbrPremier(tab) {
+    for(let i = 2; i < tab-1; i++){
+        if(tab%i === 0){
+            return false;
+          } 
+        }
+        return true;
+}
 
-// console.log(result);
+
+
+while (listOfPrimeNumber.length < 100) {
+    tab ++
+    if (nbrPremier(tab)) {
+        listOfPrimeNumber.push(tab);
+    }
+    
+}
+
+console.log(listOfPrimeNumber);
